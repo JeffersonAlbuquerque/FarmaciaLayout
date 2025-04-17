@@ -1,0 +1,147 @@
+.Main
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 8vh;
+    //border: 2px solid red;
+
+    nav
+    {
+        //border: 2px solid red;
+        padding-top: 2vh;
+        width: 70vw;
+
+        ul
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            li
+            {
+                display: flex;
+                align-items: center;
+                height: 4vh;
+                padding-left: 1vw;
+                padding-right: 1vw;
+                border-radius: 10px;
+                background-color: #f5f5f5;
+
+                a
+                {
+                    color: #212121;
+                }
+            }
+        }
+    }
+}
+.carouselWrapper 
+{
+    width: 70vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    //border: 2px solid blue;
+
+    .bannerImagem
+    {
+        width: 100%;
+        height: 100%;
+    }
+}
+.categorias
+{
+    display: flex;
+    justify-content: space-between;
+    width: 70vw;
+    padding-top: 5vh;
+    padding-bottom: 10vh;
+    //border: 2px solid red;
+    //border: 2px solid red;
+
+    .card
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        border: 2px solid #e0e0e0;
+        width: 12vw;
+        border-radius: 10px;
+        cursor: pointer;
+        
+
+        .imgProduto
+        {
+            width: 10vw;
+        }
+
+        .infor
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            //border: 2px solid red;
+            padding-left: 0.5vw;
+            padding-right: 0.5vw;
+            
+            .desc
+            {
+                padding-bottom: 1vh;
+            }
+            .preco
+            {
+                font-weight: bold;
+                color: red;
+                padding-bottom: 0.5vh;
+            }
+            .desconto
+            {
+                font-weight: bold;
+                color: green;
+            }
+            
+        }
+        .campoCompra
+        {
+            display: flex;
+            justify-content: space-evenly;
+            //border: 2px solid red;
+            width: 100%;
+            padding-top: 1vh;
+            padding-bottom: 1vh;
+
+            .campoCompraDois
+            {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                //border: 2px solid red;
+                width: 5vw;
+                border: 2px solid #e0e0e0;
+                border-radius: 5px;
+                height: 4vh;
+
+                
+                .btnAtribuir
+                {
+                    width: 1.2vw;
+                    height: 3vh;
+                    background-color: transparent;
+                    border: none;
+                }
+            }
+            .Comprar
+            {
+                border: none;
+                width: 5vw;
+                border-radius: 3px;
+                background-color: green;
+                color: white;
+            } 
+        }
+
+    }
+}
+

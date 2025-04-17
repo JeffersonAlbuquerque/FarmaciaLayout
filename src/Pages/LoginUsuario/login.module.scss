@@ -1,0 +1,238 @@
+.Main {
+    padding-top: 12vh;
+    padding-bottom: 5vh;
+    //border: 2px solid red;
+
+    .forms {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        //border: 2px solid blue;
+    }
+}
+
+.formLogin {
+    display: flex;
+    justify-content: space-evenly;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    //border: 2px solid red;
+
+    h1 {
+        font-size: 30px;
+        //color: ;
+    }
+
+    .campoInput {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        //border: 2px solid green;
+        height: 17vh;
+    }
+
+    .input {
+        border-radius: 5px;
+        height: 5vh;
+        width: auto;
+        border: none;
+        background-color: #f5f5f5;
+
+    }
+
+    .input::-moz-placeholder {
+        padding-left: 1.2vw;
+
+    }
+
+    .input::placeholder {
+        padding-left: 1.2vw;
+        color: #808080;
+
+    }
+
+    .entrar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        button {
+            width: 10vw;
+            height: 5vh;
+            border-radius: 10px;
+            background-color: #f7bf20;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    .trocarSenha {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        //border: 2px solid red;
+        height: 14vh;
+        visibility: hidden;
+
+        button {
+            width: 10vw;
+            height: 5vh;
+            border: none;
+            background-color: #f7bf20;
+        }
+    }
+}
+
+.FormCadastro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    //border: 2px solid yellow;
+    width: 30vw;
+    border-radius: 20px;
+    background-color: #f4f6f6;
+
+}
+
+.containerTitulo 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 1vh;
+    height: 10vh;
+    //border: 2px solid red;
+    
+    p
+    {
+        color: #444444;;
+    }
+    h1
+    {
+        font-size: 30px;
+    }
+
+}
+
+.containerCadastro 
+{
+    //border: 2px solid blue;
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+}
+.containerGrande {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1vh;
+    width: 25vw;
+
+    legend
+    {
+        padding-left: 0.2vw;
+        color: #bd0101;
+        padding-bottom: 1vh;
+    }
+    .inputG {
+        border-radius: 5px;
+        height: 5vh;
+        width: 24vw;
+        border: none;
+        background-color: #ffffff;
+        padding-left: 1vh;
+        //border: 2px solid red;
+
+    }
+
+
+
+    .inputG::placeholder {
+        color: #808080;
+
+    }
+}
+
+.containerPequeno {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    //border: 2px solid red;
+    height: 8vh;
+    width: 23vw;
+
+    .inputP {
+        border-radius: 5px;
+        height: 5vh;
+        width: 11vw;
+        border: none;
+        background-color: #ffffff;
+        padding-left: 1vh;
+        //border: 2px solid red;
+
+    }
+
+
+    .inputP::placeholder {
+        color: #808080;
+
+    }
+}
+.containerCheckBox {
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    //border: 2px solid red;
+
+    legend
+    {
+        padding-left: 0.2vw;
+        color: #bd0101;
+        padding-bottom: 1vh;
+        padding-top: 2vh;
+    }
+    .checkbox
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        //border: 2px solid red;
+        height: 4vh;
+        padding-left: 0.2vw;
+
+        span
+        {
+            //border: 2px solid blue;
+            width: 95%;
+        }
+    }
+}
+.cadastrarBtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 25vw;
+    height: 14vh;
+    //border: 2px solid;
+
+    button 
+    {
+        border: none;
+        border-radius: 3px;
+        width: 10vw;
+        height: 5vh;
+        background-color: green;
+        color: white;
+    }
+    p
+    {
+        height: 6vh;
+        width: 100%;
+        text-align: center;
+        //border: 2px solid red;
+        color: #bd0101;;
+    }
+}

@@ -1,0 +1,107 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    z-index: 100;
+    //border: 2px solid blue;
+    height: 8vh;
+    background-color: white;
+
+    .headerFilho {
+        display: flex;
+        width: 90vw;
+        align-items: center;
+        justify-content: space-evenly;
+        //border: 2px solid red;
+    }
+
+    .logo {
+        width: 8vw;
+    }
+
+    .barraDeBusca {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 35vw;
+        height: 5vh;
+        border-radius: 900px;
+        background-color: #e5e5e5;
+        //border: 2px solid red;
+
+        input {
+            width: 30vw;
+            height: 4vh;
+            background-color: transparent;
+            font-size: 1em;
+            border: none;
+            outline: none;
+            //border: 2px solid red;
+        }
+
+        img {
+            width: 1.3vw;
+            //border: 2px solid blue;
+        }
+    }
+
+    nav 
+    {
+        //border: 2px solid red;
+        width: 40vw;
+
+        ul 
+        {
+            display: flex;
+            align-items: center;
+            //justify-content: space-between;
+
+
+            li 
+            {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                width: 12vw;
+                height: 6vh;
+                //border: 2px solid yellow;
+
+                img
+                {
+                    width: 2vw;
+                    height: 4vh;
+                    //border: 2px solid blue;
+                }
+                div
+                {
+
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: 0.5vw;
+
+                    .link
+                    {
+                        color: #5a5a5a ;
+                    }
+                    span
+                    {
+                        font-weight: bold;
+                    }
+                    
+                }
+
+                &:hover
+                {
+                    background-color: #e6fbfd;
+                    border-radius: 50px;
+                }
+            }
+        }
+    }
+
+}
