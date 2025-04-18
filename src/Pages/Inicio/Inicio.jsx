@@ -20,9 +20,10 @@ import prod4 from '../../assets/Produtos/prod4.jpg'
 import prod5 from '../../assets/Produtos/prod5.jpg'
 
 export default function Inicio() {
-    const [bannerRemedio, setbannerRemedio] = useState([
+    const [bannerRemedio, setbannerRemedio] = useState([ 
         banner1, banner2, banner3, banner4, banner5, banner6
     ]);
+    const [locationDenied, setLocationDenied] = useState(false); // Controla o estado de recusa da geolocalização
 
     useEffect(() => {
         if (navigator.geolocation) {
@@ -55,7 +56,30 @@ export default function Inicio() {
     }
 
     function handleError(error) {
-        console.warn("Erro ao obter a localização: " + error.message);
+        switch (error.code) {
+            case error.PERMISSION_DENIED:
+                alert("Você recusou o compartilhamento da localização. A geolocalização é necessária para o funcionamento correto do site.");
+                setLocationDenied(true); // Marca que a localização foi recusada
+                break;
+            case error.POSITION_UNAVAILABLE:
+                alert("Não foi possível determinar sua localização. Tente novamente mais tarde.");
+                break;
+            case error.TIMEOUT:
+                alert("A solicitação de localização expirou. Tente novamente.");
+                break;
+            case error.UNKNOWN_ERROR:
+                alert("Ocorreu um erro desconhecido ao tentar obter sua localização.");
+                break;
+            default:
+                alert("Erro ao obter a localização.");
+                break;
+        }
+    }
+
+    function requestLocationAgain() {
+        setLocationDenied(false); // Reseta o estado de recusa
+        // Tenta novamente obter a localização
+        navigator.geolocation.getCurrentPosition(sendLocation, handleError);
     }
 
     return (
@@ -121,6 +145,13 @@ export default function Inicio() {
                     ))}
                 </Swiper>
             </section>
+
+            {locationDenied && (
+                <div className={s.locationError}>
+                    <p>Você recusou o compartilhamento da localização. Para continuar, por favor, permita o acesso à sua localização.</p>
+                    <button onClick={requestLocationAgain}>Tentar novamente</button>
+                </div>
+            )}
         </main>
     );
 }
